@@ -11,5 +11,33 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# Paper and proceedings are not part of the code release
+# Only the explicitly requested paper is published
 *.pdf
+!paper/ViSAQA.pdf
+
+# Local datasets, indexes, predictions and trained weights (never publish)
+/data/
+/datasets/
+/artifacts/
+/runs/
+/checkpoints/
+/outputs/
+*.jsonl
+*.csv
+*.tsv
+*.parquet
+*.arrow
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+.cache/
+*.egg-info/
+build/
+dist/
+.pytest_cache/

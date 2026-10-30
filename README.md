@@ -2,6 +2,8 @@
 
 **Tiếng Việt** | [English](README.en.md)
 
+[![Paper](docs/images/paper.svg)](paper/ViSAQA.pdf)
+
 **Đánh giá tính đầy đủ của bằng chứng và khả năng nhận biết phạm vi trong hỏi đáp công tác sinh viên bằng tiếng Việt**
 
 Tên bài báo: *ViSAQA: Benchmarking Evidence Sufficiency and Scope Awareness in Vietnamese Student Affairs Question Answering*
@@ -17,6 +19,29 @@ Bài báo đã được chấp nhận tại [Hội nghị quốc tế EAI lần 
 ViSAQA nghiên cứu bài toán hỏi đáp công tác sinh viên bằng tiếng Việt, tập trung vào tính đầy đủ của bằng chứng và khả năng nhận biết câu hỏi ngoài phạm vi. Bộ đánh giá gồm **15.879 mẫu thuộc 21 chủ đề**, với ba nhóm: có thể trả lời, không đủ thông tin và ngoài phạm vi. Nghiên cứu đánh giá riêng chất lượng truy xuất, chất lượng câu trả lời trên các câu có đáp án và hành vi từ chối, với hai cách chia dữ liệu: tách biệt theo chủ đề và chia ngẫu nhiên.
 
 Bài báo đánh giá ViT5, BARTpho, mBART, mT5-base và mT5-small trong các điều kiện chỉ có câu hỏi, BM25, truy xuất dense và truy xuất hybrid. Hiệu quả của truy xuất phụ thuộc vào mô hình và cách chia dữ liệu; điểm tổng hợp có thể che khuất việc từ chối quá mức hoặc trả lời thiếu căn cứ.
+
+## Huấn luyện và suy luận
+
+Mã nguồn có trong [visaqa/](visaqa/), cấu hình trong [configs/paper.json](configs/paper.json). Xem [hướng dẫn đầy đủ](docs/REPRODUCIBILITY.md) để chuẩn bị dữ liệu cục bộ, train, infer và đánh giá.
+
+| Thông số trong bài | Giá trị |
+| --- | --- |
+| Mô hình | ViT5-base, BARTpho-syllable-base, mBART-50, mT5-base, mT5-small |
+| Protocol / seed | topic, random / 22, 42, 202 |
+| Epoch / learning rate / effective batch | 5 / 3e-5 / 256 |
+| Input / target / generation tối đa | 1.024 / 256 / 256 token; greedy, beam 1 |
+| Truy xuất | BM25, E5-base dense, Hybrid RRF (k=60) |
+| Reranker / ứng viên / top-k | BGE-reranker-v2-m3 / 20 / 3 |
+
+~~~bash
+python -m pip install -e ".[ml]"
+python -m visaqa --help
+python -m visaqa matrix --plan runs/plan.json
+~~~
+
+Lệnh matrix chỉ tạo kế hoạch **60 lượt train và 120 cấu hình inference**; thêm --execute mới chạy. Các lệnh train/infer cụ thể nằm trong hướng dẫn. Mã mới bám các thông số đã công bố; [các mặc định chưa được bài xác định đầy đủ](docs/REPRODUCIBILITY.md#các-mặc-định-chưa-được-bài-xác-định-đầy-đủ) được ghi rõ. Chưa chạy lại toàn bộ thí nghiệm với dữ liệu gốc.
+
+**Không phân phối dữ liệu hoặc checkpoint.** Pipeline đọc dữ liệu và split gốc từ máy của bạn; data/, artifacts/, runs/ và các tệp dữ liệu/trọng số được Git bỏ qua.
 
 ## Ứng dụng minh họa
 
@@ -55,7 +80,7 @@ Câu trả lời dẫn hai nguồn `14.6.1.9.QD3002.2023_HBKT&Hotro.txt` và `1.
 
 ## Nội dung repository
 
-Repository hiện có tài liệu giới thiệu song ngữ, ảnh minh họa ứng dụng và thông tin trích dẫn. Mã nguồn triển khai chưa được bổ sung. Bản PDF bài báo và các tệp kỷ yếu không nằm trong repository.
+Repository có mã chuẩn bị dữ liệu, chunking, truy xuất, huấn luyện, suy luận và đánh giá; cấu hình theo bài; hướng dẫn song ngữ; ảnh demo; citation và [bản PDF do tác giả cung cấp](paper/ViSAQA.pdf). Không chứa dữ liệu benchmark hoặc trọng số huấn luyện.
 
 ## Trích dẫn
 

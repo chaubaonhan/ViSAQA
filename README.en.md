@@ -2,6 +2,8 @@
 
 [Tiếng Việt](README.md) | **English**
 
+[![Paper](docs/images/paper.svg)](paper/ViSAQA.pdf)
+
 **Benchmarking Evidence Sufficiency and Scope Awareness in Vietnamese Student Affairs Question Answering**
 
 Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · Bao Nhan Chau · Hoang Kiet Duong · Van Dung Nguyen
@@ -15,6 +17,29 @@ Accepted at the [6th EAI International Conference on Artificial Intelligence for
 ViSAQA studies Vietnamese Student Affairs question answering with an emphasis on evidence sufficiency and scope awareness. The benchmark contains **15,879 examples across 21 topics**, including answerable, insufficient-information, and out-of-scope questions. The study separates retrieval quality, answer quality on answerable questions, and rejection behavior under topic-disjoint and random splits.
 
 The paper evaluates ViT5, BARTpho, mBART, mT5-base, and mT5-small with question-only, BM25, dense, and hybrid conditions. Retrieval benefits depend on the model and split; aggregate scores alone can obscure over-rejection and unsupported answers.
+
+## Training and inference
+
+Implementation: [visaqa/](visaqa/). Configuration: [configs/paper.json](configs/paper.json). See the [full guide](docs/REPRODUCIBILITY.en.md) for local data preparation, training, inference and evaluation.
+
+| Paper setting | Value |
+| --- | --- |
+| Models | ViT5-base, BARTpho-syllable-base, mBART-50, mT5-base, mT5-small |
+| Protocols / seeds | topic, random / 22, 42, 202 |
+| Epochs / learning rate / effective batch | 5 / 3e-5 / 256 |
+| Maximum input / target / generation | 1,024 / 256 / 256 tokens; greedy, beam 1 |
+| Retrieval | BM25, E5-base dense, Hybrid RRF (k=60) |
+| Reranker / candidates / top-k | BGE-reranker-v2-m3 / 20 / 3 |
+
+~~~bash
+python -m pip install -e ".[ml]"
+python -m visaqa --help
+python -m visaqa matrix --plan runs/plan.json
+~~~
+
+The matrix command only plans **60 training runs and 120 inference configurations**; execution requires --execute. The guide includes individual training/inference commands and [implementation defaults not fully specified in the paper](docs/REPRODUCIBILITY.en.md#defaults-not-fully-specified-in-the-paper). The full experiments have not been rerun with the original data.
+
+**No dataset or checkpoint is distributed.** The pipeline reads original data/splits from your machine; data/, artifacts/, runs/ and data/weight files are excluded from Git.
 
 ## Application demo
 
@@ -55,7 +80,7 @@ Screenshots captured from the live application on **30 October 2026**. The acces
 
 ## Release contents
 
-This repository currently contains the bilingual documentation, application screenshots, and citation metadata. The implementation source has not yet been added. The paper PDF and proceedings files are not included.
+This repository contains data preparation, chunking, retrieval, training, inference and evaluation code; paper settings; bilingual guides; demo screenshots; citation metadata; and the [author-supplied paper PDF](paper/ViSAQA.pdf). Benchmark data and trained weights are not included.
 
 ## Citation
 
