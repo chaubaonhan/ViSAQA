@@ -1,0 +1,15 @@
+# Local tooling and intermediate captures
+/tmp/
+
+# Credentials
+.env
+.env.*
+!.env.example
+
+# Python runtime files
+__pycache__/
+*.py[cod]
+.venv/
+
+# Paper and proceedings are not part of the code release
+*.pdf
