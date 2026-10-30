@@ -1,9 +1,5 @@
 <p align="center">
-  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/eai-aicon-2026-logo.png" alt="EAI AICON 2026 logo" width="350"></a>
-</p>
-
-<p align="center">
-  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/aicon-2026-banner.jpg" alt="Phu Quoc image from the EAI AICON 2026 conference website" width="900"></a>
+  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/eai-aicon-2026-readme-banner.svg" alt="EAI AICON 2026 — 6th EAI International Conference on Artificial Intelligence for Communications and Networks" width="900"></a>
 </p>
 
 <h1 align="center">ViSAQA</h1>
