@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/aicon-2026-banner.jpg" alt="Ảnh Phú Quốc từ trang hội nghị EAI AICON 2026" width="900"></a>
+</p>
+
 <h1 align="center">ViSAQA</h1>
 
 <p align="center">
