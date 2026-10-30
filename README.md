@@ -9,7 +9,7 @@
 
 <p align="center"><em>ViSAQA: Benchmarking Evidence Sufficiency and Scope Awareness in Vietnamese Student Affairs Question Answering</em></p>
 
-<p align="center">Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · Bao Nhan Chau · Hoang Kiet Duong · Van Dung Nguyen</p>
+<p align="center">Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · **Bao Nhan Chau** · Hoang Kiet Duong · Van Dung Nguyen</p>
 
 <p align="center">
   <a href="paper/ViSAQA.pdf"><img src="docs/images/badges/paper.svg" alt="Paper PDF" height="36"></a>
