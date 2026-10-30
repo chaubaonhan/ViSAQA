@@ -1,18 +1,29 @@
-# ViSAQA
+<h1 align="center">ViSAQA</h1>
 
-**Tiếng Việt** | [English](README.en.md)
+<p align="center">
+  <a href="README.md"><img src="docs/images/badges/language-vi-active.svg" alt="Tiếng Việt" height="36"></a>
+  <a href="README.en.md"><img src="docs/images/badges/language-en.svg" alt="English" height="36"></a>
+</p>
 
-[![Paper](docs/images/paper.svg)](paper/ViSAQA.pdf)
+<p align="center"><strong>Đánh giá tính đầy đủ của bằng chứng và khả năng nhận biết phạm vi<br>trong hỏi đáp công tác sinh viên bằng tiếng Việt</strong></p>
 
-**Đánh giá tính đầy đủ của bằng chứng và khả năng nhận biết phạm vi trong hỏi đáp công tác sinh viên bằng tiếng Việt**
+<p align="center"><em>ViSAQA: Benchmarking Evidence Sufficiency and Scope Awareness in Vietnamese Student Affairs Question Answering</em></p>
 
-Tên bài báo: *ViSAQA: Benchmarking Evidence Sufficiency and Scope Awareness in Vietnamese Student Affairs Question Answering*
+<p align="center">Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · Bao Nhan Chau · Hoang Kiet Duong · Van Dung Nguyen</p>
 
-Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · Bao Nhan Chau · Hoang Kiet Duong · Van Dung Nguyen
+<p align="center">
+  <a href="paper/ViSAQA.pdf"><img src="docs/images/badges/paper.svg" alt="Paper PDF" height="36"></a>
+  <a href="https://huggingface.co/spaces/BaoNhan/tra-cuu-ctsv"><img src="docs/images/badges/demo.svg" alt="Live Demo — Hugging Face" height="36"></a>
+  <a href="visaqa/"><img src="docs/images/badges/code.svg" alt="Source code" height="36"></a>
+  <a href="docs/REPRODUCIBILITY.md"><img src="docs/images/badges/guide-vi.svg" alt="Hướng dẫn" height="36"></a>
+  <a href="#trích-dẫn"><img src="docs/images/badges/cite-vi.svg" alt="Trích dẫn" height="36"></a>
+</p>
 
-Bài báo đã được chấp nhận tại [Hội nghị quốc tế EAI lần thứ 6 về Trí tuệ nhân tạo cho Truyền thông và Mạng (EAI AICON 2026)](https://aicon-conf.eai-conferences.org/2026/). **Trạng thái xuất bản trong kỷ yếu: To Appear.**
+<p align="center">
+  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/badges/status.svg" alt="EAI AICON 2026 — To Appear" height="36"></a>
+</p>
 
-[Trải nghiệm ứng dụng](https://huggingface.co/spaces/BaoNhan/tra-cuu-ctsv) · [Trích dẫn](#trích-dẫn)
+Bài báo đã được chấp nhận tại Hội nghị quốc tế EAI lần thứ 6 về Trí tuệ nhân tạo cho Truyền thông và Mạng. **Trạng thái kỷ yếu: To Appear.**
 
 ## Giới thiệu
 

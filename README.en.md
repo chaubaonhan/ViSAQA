@@ -1,16 +1,27 @@
-# ViSAQA
+<h1 align="center">ViSAQA</h1>
 
-[Tiếng Việt](README.md) | **English**
+<p align="center">
+  <a href="README.md"><img src="docs/images/badges/language-vi.svg" alt="Tiếng Việt" height="36"></a>
+  <a href="README.en.md"><img src="docs/images/badges/language-en-active.svg" alt="English" height="36"></a>
+</p>
 
-[![Paper](docs/images/paper.svg)](paper/ViSAQA.pdf)
+<p align="center"><strong>Benchmarking Evidence Sufficiency and Scope Awareness<br>in Vietnamese Student Affairs Question Answering</strong></p>
 
-**Benchmarking Evidence Sufficiency and Scope Awareness in Vietnamese Student Affairs Question Answering**
+<p align="center">Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · Bao Nhan Chau · Hoang Kiet Duong · Van Dung Nguyen</p>
 
-Huu Dung Nguyen · Phuoc Tran · Van Thinh Nguyen · Bao Nhan Chau · Hoang Kiet Duong · Van Dung Nguyen
+<p align="center">
+  <a href="paper/ViSAQA.pdf"><img src="docs/images/badges/paper.svg" alt="Paper PDF" height="36"></a>
+  <a href="https://huggingface.co/spaces/BaoNhan/tra-cuu-ctsv"><img src="docs/images/badges/demo.svg" alt="Live Demo — Hugging Face" height="36"></a>
+  <a href="visaqa/"><img src="docs/images/badges/code.svg" alt="Source code" height="36"></a>
+  <a href="docs/REPRODUCIBILITY.en.md"><img src="docs/images/badges/guide-en.svg" alt="Guide" height="36"></a>
+  <a href="#citation"><img src="docs/images/badges/cite-en.svg" alt="Citation" height="36"></a>
+</p>
 
-Accepted at the [6th EAI International Conference on Artificial Intelligence for Communications and Networks (EAI AICON 2026)](https://aicon-conf.eai-conferences.org/2026/). **Proceedings: To Appear.**
+<p align="center">
+  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/badges/status.svg" alt="EAI AICON 2026 — To Appear" height="36"></a>
+</p>
 
-[Live application](https://huggingface.co/spaces/BaoNhan/tra-cuu-ctsv) · [Citation](#citation)
+Accepted at the 6th EAI International Conference on Artificial Intelligence for Communications and Networks. **Proceedings: To Appear.**
 
 ## Overview
 
