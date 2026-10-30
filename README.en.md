@@ -1,4 +1,8 @@
 <p align="center">
+  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/eai-aicon-2026-logo.png" alt="EAI AICON 2026 logo" width="350"></a>
+</p>
+
+<p align="center">
   <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/aicon-2026-banner.jpg" alt="Phu Quoc image from the EAI AICON 2026 conference website" width="900"></a>
 </p>
 

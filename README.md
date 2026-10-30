@@ -1,4 +1,8 @@
 <p align="center">
+  <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/eai-aicon-2026-logo.png" alt="Logo EAI AICON 2026" width="350"></a>
+</p>
+
+<p align="center">
   <a href="https://aicon-conf.eai-conferences.org/2026/"><img src="docs/images/aicon-2026-banner.jpg" alt="Ảnh Phú Quốc từ trang hội nghị EAI AICON 2026" width="900"></a>
 </p>
 
